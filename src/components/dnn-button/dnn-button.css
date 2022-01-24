@@ -17,6 +17,22 @@
   --padding: var(--dnn-controls-padding, 5px);
 }
 
+/* Primary is default so we have nothing to override.
+
+/* Secondary overrides. */
+.secondary{
+  --background-color: var(--dnn-color-secondary);
+  --color: var(--dnn-color-secondary-contrast);
+  --focus-color: var(--dnn-color-secondary);
+}
+
+/* Tertiary overrides. */
+.tertiary{
+  --background-color: var(--dnn-color-tertiary);
+  --color: var(--dnn-color-tertiary-contrast);
+  --focus-color: var(--dnn-color-tertiary);
+}
+
 button{
   cursor: pointer;
   background-color: var(--background-color);
@@ -29,3 +45,4 @@ button:hover, button:focus{
   outline: none;
   box-shadow: 0 0 2px 2px var(--focus-color);
 }
+

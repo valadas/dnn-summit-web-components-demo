@@ -7,6 +7,10 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface DnnButton {
+        /**
+          * Defines the type of button.
+         */
+        "type": "primary" | "secondary" | "tertiary";
     }
 }
 declare global {
@@ -22,6 +26,10 @@ declare global {
 }
 declare namespace LocalJSX {
     interface DnnButton {
+        /**
+          * Defines the type of button.
+         */
+        "type"?: "primary" | "secondary" | "tertiary";
     }
     interface IntrinsicElements {
         "dnn-button": DnnButton;

@@ -5,6 +5,13 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property | Attribute | Description                 | Type                                     | Default     |
+| -------- | --------- | --------------------------- | ---------------------------------------- | ----------- |
+| `type`   | `type`    | Defines the type of button. | `"primary" \| "secondary" \| "tertiary"` | `"primary"` |
+
+
 ## CSS Custom Properties
 
 | Name                 | Description                                 |
