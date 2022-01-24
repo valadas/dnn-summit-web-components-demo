@@ -8,6 +8,10 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface DnnButton {
         /**
+          * If true, will reverse the button styles
+         */
+        "reversed": boolean;
+        /**
           * Defines the type of button.
          */
         "type": "primary" | "secondary" | "tertiary";
@@ -26,6 +30,10 @@ declare global {
 }
 declare namespace LocalJSX {
     interface DnnButton {
+        /**
+          * If true, will reverse the button styles
+         */
+        "reversed"?: boolean;
         /**
           * Defines the type of button.
          */

@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description                 | Type                                     | Default     |
-| -------- | --------- | --------------------------- | ---------------------------------------- | ----------- |
-| `type`   | `type`    | Defines the type of button. | `"primary" \| "secondary" \| "tertiary"` | `"primary"` |
+| Property   | Attribute  | Description                             | Type                                     | Default     |
+| ---------- | ---------- | --------------------------------------- | ---------------------------------------- | ----------- |
+| `reversed` | `reversed` | If true, will reverse the button styles | `boolean`                                | `false`     |
+| `type`     | `type`     | Defines the type of button.             | `"primary" \| "secondary" \| "tertiary"` | `"primary"` |
 
 
 ## CSS Custom Properties
