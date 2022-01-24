@@ -4,16 +4,16 @@
   /** --background-color: Defines the background-color of the button. */
   --background-color: var(--dnn-color-primary, blue);
 
-  /** --color: Defines the color of the button content */
+  /** @prop --color: Defines the color of the button content */
   --color: var(--dnn-color-primary-contrast, white);
 
-  /** --color: Defines the color around the button when focuses */
+  /** @prop --color: Defines the color around the button when focuses */
   --focus-color: var(--background-color);
 
-  /** --border-radius: Defines the radius of the button borders */
+  /** @prop --border-radius: Defines the radius of the button borders */
   --border-radius: var(--dnn-controls-radius, 0);
 
-  /** --padding: Defines the padding on the button */
+  /** @prop --padding: Defines the padding on the button */
   --padding: var(--dnn-controls-padding, 5px);
 }
 
