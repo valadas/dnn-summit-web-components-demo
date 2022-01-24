@@ -11,6 +11,7 @@ export namespace Components {
           * If true, will reverse the button styles
          */
         "reversed": boolean;
+        "size": "small" | "large" | undefined;
         /**
           * Defines the type of button.
          */
@@ -34,6 +35,7 @@ declare namespace LocalJSX {
           * If true, will reverse the button styles
          */
         "reversed"?: boolean;
+        "size"?: "small" | "large" | undefined;
         /**
           * Defines the type of button.
          */

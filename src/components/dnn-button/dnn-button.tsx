@@ -13,6 +13,8 @@ export class DnnButton {
   /** If true, will reverse the button styles */
   @Prop() reversed: boolean = false;
 
+  @Prop() size: "small" | "large" | undefined = undefined;
+
   private getButtonClasses(){
     let classes: string[] = [];
     classes.push(this.type);
@@ -20,6 +22,11 @@ export class DnnButton {
     {
       classes.push("reversed");
     }
+
+    if (this.size != undefined){
+      classes.push(this.size);
+    }
+
     return classes.join(" ");
   }
 

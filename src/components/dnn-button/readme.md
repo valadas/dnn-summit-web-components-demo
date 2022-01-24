@@ -10,6 +10,7 @@
 | Property   | Attribute  | Description                             | Type                                     | Default     |
 | ---------- | ---------- | --------------------------------------- | ---------------------------------------- | ----------- |
 | `reversed` | `reversed` | If true, will reverse the button styles | `boolean`                                | `false`     |
+| `size`     | `size`     |                                         | `"large" \| "small"`                     | `undefined` |
 | `type`     | `type`     | Defines the type of button.             | `"primary" \| "secondary" \| "tertiary"` | `"primary"` |
 
 
