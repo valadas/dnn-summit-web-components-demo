@@ -27,9 +27,17 @@
         --dnn-controls-radius: 5px;
         --dnn-controls-padding: 5px;
       }
+      
+      button{ /* Applies to html buttons but does not leak into the button that is inside our custom element. */
+        background-color: grey;
+        border: none;
+        color: white;
+        padding: 5px 15px;
+      }
     </style>
   </head>
   <body>
-    <dnn-button>Test</dnn-button>
+    <button>Html Button</button>
+    <dnn-button>DNN Button</dnn-button>
   </body>
 </html>

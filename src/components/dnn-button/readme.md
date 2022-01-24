@@ -5,6 +5,16 @@
 <!-- Auto Generated Below -->
 
 
+## CSS Custom Properties
+
+| Name                 | Description                                 |
+| -------------------- | ------------------------------------------- |
+| `--background-color` | Defines the background-color of the button. |
+| `--border-radius`    | Defines the radius of the button borders    |
+| `--color`            | Defines the color of the button content     |
+| `--padding`          | Defines the padding on the button           |
+
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

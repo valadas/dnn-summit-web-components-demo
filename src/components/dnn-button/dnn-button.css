@@ -1,3 +1,31 @@
 :host {
-  display: block;
+  display: inline-block;
+
+  /** --background-color: Defines the background-color of the button. */
+  --background-color: var(--dnn-color-primary, blue);
+
+  /** --color: Defines the color of the button content */
+  --color: var(--dnn-color-primary-contrast, white);
+
+  /** --color: Defines the color around the button when focuses */
+  --focus-color: var(--background-color);
+
+  /** --border-radius: Defines the radius of the button borders */
+  --border-radius: var(--dnn-controls-radius, 0);
+
+  /** --padding: Defines the padding on the button */
+  --padding: var(--dnn-controls-padding, 5px);
+}
+
+button{
+  cursor: pointer;
+  background-color: var(--background-color);
+  color: var(--color);
+  border: none;
+  padding: var(--padding);
+  border-radius: var(--border-radius);
+}
+button:hover, button:focus{
+  outline: none;
+  box-shadow: 0 0 2px 2px var(--focus-color);
 }
