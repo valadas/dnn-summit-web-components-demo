@@ -12,6 +12,14 @@ export namespace Components {
          */
         "confirm": boolean;
         /**
+          * Disabled the button and sets it's disabled message.
+         */
+        "disable": (message: string) => Promise<void>;
+        /**
+          * Re-enables a disabled button.
+         */
+        "enable": () => Promise<void>;
+        /**
           * If true, will reverse the button styles
          */
         "reversed": boolean;

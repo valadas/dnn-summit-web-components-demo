@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, EventEmitter, Event } from '@stencil/core';
+import { Component, Host, h, Prop, EventEmitter, Event, State, Method } from '@stencil/core';
 
 @Component({
   tag: 'dnn-button',
@@ -25,6 +25,26 @@ export class DnnButton {
   /** The confirmable action was declined. */
   @Event() declined: EventEmitter;
 
+  /** Disabled the button and sets it's disabled message. */
+  @Method()
+  async disable(message: string){
+    this.disabled = true;
+    this.disabledMessage = message;
+  }
+
+  /** Re-enables a disabled button. */
+  @Method()
+  async enable(){
+    this.disabled = false;
+  }
+
+  // State is not public no need to document it,
+  // it is not accessible from the outside world
+  // but changing it triggers a re-render.
+  @State() disabled: boolean = false;
+
+  @State() disabledMessage = "";
+
   private getButtonClasses(){
     let classes: string[] = [];
     classes.push(this.type);
@@ -35,6 +55,10 @@ export class DnnButton {
 
     if (this.size != undefined){
       classes.push(this.size);
+    }
+
+    if (this.disabled){
+      classes.push("disabled");
     }
 
     return classes.join(" ");
@@ -59,7 +83,10 @@ export class DnnButton {
           class={this.getButtonClasses()}
           onClick={() => this.handleClick()}
         >
-          <slot></slot>
+          {!this.disabled &&
+            <slot></slot>
+          }
+          {this.disabled && this.disabledMessage}
         </button>
       </Host>
     );

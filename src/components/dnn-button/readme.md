@@ -23,6 +23,29 @@
 | `declined`  | The confirmable action was declined. | `CustomEvent<any>` |
 
 
+## Methods
+
+### `disable(message: string) => Promise<void>`
+
+Disabled the button and sets it's disabled message.
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+### `enable() => Promise<void>`
+
+Re-enables a disabled button.
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
 ## CSS Custom Properties
 
 | Name                 | Description                                 |

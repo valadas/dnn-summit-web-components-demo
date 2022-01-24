@@ -60,5 +60,19 @@
         confirmButton.addEventListener("declined", () => console.log("declined"));
       })();
     </script>
+    <hr />
+
+    <dnn-button id="disabled-demo">Click to disable me</dnn-button>
+    <script type="text/javascript">
+      (() => {
+        const disabledDemo = document.querySelector("#disabled-demo");
+        disabledDemo.addEventListener("click", () => {
+          disabledDemo.disable("I am disabled");
+          setTimeout(() => {
+            disabledDemo.enable();
+          }, 3000);
+        });
+      })();
+    </script>
   </body>
 </html>
