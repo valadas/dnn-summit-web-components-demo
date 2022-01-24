@@ -50,5 +50,15 @@
     <dnn-button size="small" reversed>Small reversed</dnn-button>
     <dnn-button size="large">Large button</dnn-button>
     <dnn-button size="large" reversed>Large reversed</dnn-button>
+    <hr />
+    <dnn-button id="confirm-button" confirm>Confirm button</dnn-button>
+
+    <script type="text/javascript">
+      (() => {
+        const confirmButton = document.querySelector("#confirm-button");
+        confirmButton.addEventListener("confirmed", () => console.log("confirmed"));
+        confirmButton.addEventListener("declined", () => console.log("declined"));
+      })();
+    </script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop } from '@stencil/core';
+import { Component, Host, h, Prop, EventEmitter, Event } from '@stencil/core';
 
 @Component({
   tag: 'dnn-button',
@@ -16,6 +16,15 @@ export class DnnButton {
   /** Defines the size of the button. */
   @Prop() size: "small" | "large" | undefined = undefined;
 
+  /** If true will ask for confirmation before firing an event. */
+  @Prop() confirm: boolean = false;
+
+  /** The confirmable action was approved. */
+  @Event() confirmed: EventEmitter;
+
+  /** The confirmable action was declined. */
+  @Event() declined: EventEmitter;
+
   private getButtonClasses(){
     let classes: string[] = [];
     classes.push(this.type);
@@ -31,10 +40,25 @@ export class DnnButton {
     return classes.join(" ");
   }
 
+  private handleClick(): void {
+    if (this.confirm){
+      const result = window.confirm("Are you sure ?");
+      if (result){
+        this.confirmed.emit();
+      }
+      else{
+        this.declined.emit();
+      }
+    }
+  }
+
   render() {
     return (
       <Host>
-        <button class={this.getButtonClasses()}>
+        <button
+          class={this.getButtonClasses()}
+          onClick={() => this.handleClick()}
+        >
           <slot></slot>
         </button>
       </Host>
