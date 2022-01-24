@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'dnn-button',
@@ -7,10 +7,13 @@ import { Component, Host, h } from '@stencil/core';
 })
 export class DnnButton {
 
+  /** Defines the type of button. */
+  @Prop() type: "primary" | "secondary" | "tertiary" = "primary";
+
   render() {
     return (
       <Host>
-        <button>
+        <button class={this.type}>
           <slot></slot>
         </button>
       </Host>
