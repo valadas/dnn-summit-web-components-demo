@@ -56,6 +56,19 @@ Type: `Promise<void>`
 | `--padding`          | Defines the padding on the button           |
 
 
+## Dependencies
+
+### Used by
+
+ - [dnn-payment-form](../dnn-payment-form)
+
+### Graph
+```mermaid
+graph TD;
+  dnn-payment-form --> dnn-button
+  style dnn-button fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

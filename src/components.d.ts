@@ -32,6 +32,8 @@ export namespace Components {
          */
         "type": "primary" | "secondary" | "tertiary";
     }
+    interface DnnPaymentForm {
+    }
 }
 declare global {
     interface HTMLDnnButtonElement extends Components.DnnButton, HTMLStencilElement {
@@ -40,8 +42,15 @@ declare global {
         prototype: HTMLDnnButtonElement;
         new (): HTMLDnnButtonElement;
     };
+    interface HTMLDnnPaymentFormElement extends Components.DnnPaymentForm, HTMLStencilElement {
+    }
+    var HTMLDnnPaymentFormElement: {
+        prototype: HTMLDnnPaymentFormElement;
+        new (): HTMLDnnPaymentFormElement;
+    };
     interface HTMLElementTagNameMap {
         "dnn-button": HTMLDnnButtonElement;
+        "dnn-payment-form": HTMLDnnPaymentFormElement;
     }
 }
 declare namespace LocalJSX {
@@ -71,8 +80,11 @@ declare namespace LocalJSX {
          */
         "type"?: "primary" | "secondary" | "tertiary";
     }
+    interface DnnPaymentForm {
+    }
     interface IntrinsicElements {
         "dnn-button": DnnButton;
+        "dnn-payment-form": DnnPaymentForm;
     }
 }
 export { LocalJSX as JSX };
@@ -80,6 +92,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "dnn-button": LocalJSX.DnnButton & JSXBase.HTMLAttributes<HTMLDnnButtonElement>;
+            "dnn-payment-form": LocalJSX.DnnPaymentForm & JSXBase.HTMLAttributes<HTMLDnnPaymentFormElement>;
         }
     }
 }
