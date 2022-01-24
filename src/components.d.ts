@@ -8,9 +8,16 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface DnnButton {
         /**
+          * If true will ask for confirmation before firing an event.
+         */
+        "confirm": boolean;
+        /**
           * If true, will reverse the button styles
          */
         "reversed": boolean;
+        /**
+          * Defines the size of the button.
+         */
         "size": "small" | "large" | undefined;
         /**
           * Defines the type of button.
@@ -32,9 +39,24 @@ declare global {
 declare namespace LocalJSX {
     interface DnnButton {
         /**
+          * If true will ask for confirmation before firing an event.
+         */
+        "confirm"?: boolean;
+        /**
+          * The confirmable action was approved.
+         */
+        "onConfirmed"?: (event: CustomEvent<any>) => void;
+        /**
+          * The confirmable action was declined.
+         */
+        "onDeclined"?: (event: CustomEvent<any>) => void;
+        /**
           * If true, will reverse the button styles
          */
         "reversed"?: boolean;
+        /**
+          * Defines the size of the button.
+         */
         "size"?: "small" | "large" | undefined;
         /**
           * Defines the type of button.
