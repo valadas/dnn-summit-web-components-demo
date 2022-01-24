@@ -13,6 +13,7 @@ export class DnnButton {
   /** If true, will reverse the button styles */
   @Prop() reversed: boolean = false;
 
+  /** Defines the size of the button. */
   @Prop() size: "small" | "large" | undefined = undefined;
 
   private getButtonClasses(){
