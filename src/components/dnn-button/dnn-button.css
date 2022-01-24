@@ -46,6 +46,17 @@ button:hover, button:focus{
   box-shadow: 0 0 2px 2px var(--focus-color);
 }
 
+button.small{
+  padding: calc(0.5 * var(--padding)) calc(0.5 * var(--padding));
+  font-size:0.8em;
+}
+
+button.large{
+  padding: calc(1.5 * var(--padding)) calc(2 * var(--padding));
+  font-size: 1.2em;
+  font-weight: medium;
+}
+
 /* Reversed styles. */
 button.reversed{
   background-color: var(--color);
